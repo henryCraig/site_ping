@@ -19,7 +19,7 @@ class SitePing():
         #We find the difference between the start time and current time,
         #convert to minutes, then check if that difference is less than 5 mins,
         #if its not break out of the loop
-        while (current_time - start_time).total_seconds()/60 < 1:
+        while (current_time - start_time).total_seconds()/60 < 5:
             for site in site_list:
                 stdout = Popen(['ping', '-n', '1', site],
                                stdout=PIPE,
